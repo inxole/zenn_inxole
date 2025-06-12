@@ -1,6 +1,6 @@
 ---
-title: "blenderでアニメーションを"
-slug: "blender_data"
+title: "blenderでマテリアルを"
+slug: "002_blender_data"
 price: 0
 ---
 
@@ -95,4 +95,4 @@ Animation windowsのDope sheetをGraph Editorに変更します。Graph Editor�
 
 ドライバーは【value】の入力の右クリックメニューから「Add Driver」を選択します。そして、画像8のようなプロパティが出現します。Type：Averaged Valueに変更し、+Add Input Variableを選択して画像9のように変更します。あとは、Object：先ほどのEmpty、Prop：先ほどのEmpty、Propを変更すると出るPath：["prop"]を設定します。
 
-え？波形が消えた？それならEmptyを選択して確認できます。blenderについては以上です。次は失敗談を紹介します。失敗を知りたいなら買ってください。興味が無ければ次の章に向かってください。
+次は失敗談を紹介します。失敗を知りたいなら買ってください。興味が無ければ次の章に向かってください。

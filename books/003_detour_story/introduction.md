@@ -1,6 +1,6 @@
 ---
 title: "はじめに"
-slug: "intro"
+slug: "001_intro"
 price: 0
 ---
 [壱]:youtu.be/1MdnR_J4QlI
@@ -15,8 +15,8 @@ Blenderで作成したモデルをBabylon.jsで表示する方法を紹介しま
 
 ## 対称
 
-Babylon.jsをある程度使える方
-Babylon.jsのNodeMaterialをスクリプトで実現したい方。
+reactを使える方
+Babylon.jsを使える方
 
 ## 背景
 
@@ -58,10 +58,20 @@ loadersでglbがロードできます。
 先にnode.jsをインストールする必要があります。
 linuxを使用して次のコマンドでインストールします。
 
-
 ```bash
 sudo apt update && apt install node npm
 npm install pnpm
+```
+
+```bash
+pnpm create vite
+```
+
+表示された内容にしたがってProject Name：任意、Select to framework：react --> typescript + SWCを実行します。
+自動で作成されたテンプレートにnode_modulesを追加するために次のコマンドを実行します。
+
+```bash
+pnpm install
 ```
 
 pnpmを使ってパッケージをインストールしてください。
@@ -79,5 +89,6 @@ pnpm add @babylonjs/gui @babylonjs/inspector @babylonjs/materials @babylonjs/pos
 ```bash
 npm update pnpm
 ```
-pnpmでパッケージを追加しているとたまに「Update available」と出て「pnpm add -g pnpm」と推奨コマンドを教えてくれます。指示に従ってやってみても「pnpm setup」と出ます。セットアップしても効果が無いので次のコマンドをやってみるのがいいかもです。
-オプションで「-g」を付けるべきかもしれないです。
+
+pnpmでパッケージを追加しているとたまに「Update available」と出て「pnpm add -g pnpm」と推奨コマンドを教えてくれます。指示に従ってやってみても「pnpm setup」と出ます。セットアップしても効果が無い場合は、上記のコマンドをやってみるのがいいかもです。
+オプションで「-g」を付けるべきかもしれないです。私は不要でしたので上記のコマンドでいいと思います。
