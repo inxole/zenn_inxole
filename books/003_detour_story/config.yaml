@@ -2,10 +2,11 @@ title: ”動画のモデルをサイトに表示させる"
 summary: "babylon.jsで音声を使用してサイトのモデルを変形させる方法"
 topics: [ "react","typescript","node.js","blender" ] # トピック（5つまで）
 published: false # falseだと下書き
-price: 0 # 有料の場合200〜5000
+price: 0
 chapters:
   - introduction
   - blender_data
   - blender_glb_animation
   - blender_glb_setting
   - babylonjs_in_react
+  - glb_export
