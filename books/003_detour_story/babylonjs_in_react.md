@@ -80,3 +80,20 @@ Campusコンポーネントについて紹介します（コード2）。
 9、10行目でカメラとライトを作成しています。12行目でsceneRefの初期値を作成したsceneに置き換えてます。これで親コンポーネントで作成したメッシュなどシーンから探して使用することができます。
 
 14行目は描画をループさせます。無い場合はエラーを起こす可能性が高いです。15行目はウィンドウ(ChromeやEdge等)の大きさが変更されたときにcanvasのサイズを変更するためのものです。17行目はサイトの動きを低下させないために利用しています。「dispose」や「remove」で不要なものは消してメモリリークを解放するそうです。これは知らなかった。
+
+## Babylon.jsでアニメーションを確認する方法
+
+アニメーションはインスペクターを使用して確認できます。次のコードをコード3に入れてください。
+
+```ts
+ 1 | let isInspectorOpen = false
+ 2 | export function load_inspector(scene: Scene) {
+ 3 |     if (isInspectorOpen) return
+ 4 |     isInspectorOpen = true
+ 5 |     Inspector.Show(scene, {})
+ 6 | }
+```
+
+ブラウザ上：Inspector内のAnimationGroupでアニメーションのコントロールができます。1行目はInspectorが2個作成されてしまうのを防ぐためのものです。3行目で「isInspectorOpen」がtrueだったら下の二行を実行するようにしています。インスペクターの使用方法は以下のサイトで見てください。
+
+[https://doc.babylonjs.com/toolsAndResources/inspector](https://doc.babylonjs.com/toolsAndResources/inspector)

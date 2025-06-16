@@ -13,13 +13,19 @@ price: 0
 
 ## 各設定について
 
-準備ができたのでこれでglbにエクスポートします。メニュー：File --> Export --> gltf2.0を実行します。
+glbにエクスポートします。メニュー：File --> Export --> gltf2.0を実行します。
+
+### Includesの設定
 
 |画像13|
 |---|
 |![][1]|
 
-画像13のIncludeはSelected Objectsだけ使用します。
+Selected Objectsだけ使用すればいいです。
+
+### Transformの設定
+
+gltfがy軸をシーン上の縦軸にしているから、z軸をy軸としてエクスポートするためのものです。
 
 ### Dataの設定
 
