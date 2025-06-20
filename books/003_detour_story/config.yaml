@@ -10,3 +10,4 @@ chapters:
   - blender_glb_setting
   - babylonjs_in_react
   - glb_export
+  - glb_analyzer
