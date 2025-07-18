@@ -1,5 +1,5 @@
 ---
-title: "babylon.jsをreact+typescripで実装する"
+title: "第4章：babylon.jsをreact+typescriptで使えるようにする"
 slug: "005_blender_in_react"
 price: 0
 ---
@@ -44,11 +44,11 @@ Campusコンポーネントについて紹介します（コード2）。
 
 2、3行目で変数を定義します。canvasRefとsceneRefにします。useRefは公式(React)によると「レンダリングに必要のない値を参照できるフック」だそうです。二つの変数はBabylon.jsのレンダイングで使用するためuseEffectを使わないといけません。
 
-5～8行目はuseEffectを使用して、３D空間を作成する関数：Load_Assistantを実行させます。関数は初回レンダリング時にだけ実行させます。引数のcanvasRef.currentは内部でエンジンを作成させるために使用します。引数のsceneRefはCampusコンポーネントで新たにメッシュなどを加えるために必要です。
+5～8行目はuseEffectを使用して、３D空間を作成する関数：load_Assistantを実行させます。関数は初回レンダリング時にだけ実行させます。引数のcanvasRef.currentは内部でエンジンを作成させるために使用します。引数のsceneRefはCampusコンポーネントで新たにメッシュなどを追加するために必要です。
 
 10～12行目にcanvasを使用して、３Dの描画を可能にします。refを使用してcanvas要素内にcanvasRefを渡します。これで要素自体を変更できます。
 
-次に関数「Load_Assistant」を紹介します。
+次に関数「load_Assistant」を紹介します。
 
 ```ts
 コード3
@@ -60,8 +60,8 @@ Campusコンポーネントについて紹介します（コード2）。
 6  |     const scene = new Scene(engine)
 7  |     scene.clearColor = new Color4(0, 0, 0, 0)
 8  | 
-9  |     Load_camera(scene, canvas)
-10 |     Load_Light(scene)
+9  |     load_camera(scene, canvas)
+10 |     load_light(scene)
 11 |     
 12 |     sceneRef.current = scene
 13 |     
@@ -79,13 +79,14 @@ Campusコンポーネントについて紹介します（コード2）。
 
 9、10行目でカメラとライトを作成しています。12行目でsceneRefの初期値を作成したsceneに置き換えてます。これで親コンポーネントで作成したメッシュなどシーンから探して使用することができます。
 
-14行目は描画をループさせます。無い場合はエラーを起こす可能性が高いです。15行目はウィンドウ(ChromeやEdge等)の大きさが変更されたときにcanvasのサイズを変更するためのものです。17行目はサイトの動きを低下させないために利用しています。「dispose」や「remove」で不要なものは消してメモリリークを解放するそうです。これは知らなかった。
+14行目は描画をループさせます。この行が無いと再レンダリングされません。15行目はウィンドウ(ChromeやEdge等)の大きさが変更されたときにcanvasのサイズを変更するためのものです。17行目はサイトの動きを低下させないために利用しています。「dispose」や「remove」で不要なものは消してメモリリークを解放します。
 
 ## Babylon.jsでアニメーションを確認する方法
 
-アニメーションはインスペクターを使用して確認できます。次のコードをコード3に入れてください。
+アニメーションはインスペクターを使用して確認できます。次のコード4をコード3に入れてください。
 
 ```ts
+コード4
  1 | let isInspectorOpen = false
  2 | export function load_inspector(scene: Scene) {
  3 |     if (isInspectorOpen) return
