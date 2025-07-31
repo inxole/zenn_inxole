@@ -1,5 +1,5 @@
 ---
-title: "FreeMoCapで録画したモーションデータをBlenderで出力する方法"
+title: "FreeMoCapでモーションキャプチャを始める：セットアップから3Dデータ出力まで"
 emoji: "🎥"
 type: "tech"
 topics: ["FreeMoCap", "Blender", "Python"]
@@ -84,7 +84,7 @@ GUIを起動後、画像1のFreeMoCapと画像2の注釈？が表示されます
 |---|
 |![][1]|
 
-|画像2：注釈v1.6.0について？|
+|画像2：注釈v1.6.0について|
 |---|
 |![][2]|
 
@@ -111,7 +111,7 @@ OpenCVが競合するため「opencv-contrib-python」を使用することを�
 |---|
 |![][4]|
 
-ログに「Auto Open in Blender checkbox is checked - triggering 'Create Blender Scene'.」と表示されていれば、Blenderとの連携が成功します。どのバージョンのblenderを使用するか選らんでください。自動でblenderが開き、モーションデータと映像データが両方インポートされたシーンを作成するようです。
+ログに「Auto Open in Blender checkbox is checked - triggering 'Create Blender Scene'.」と表示されていれば、Blenderとの連携が成功します。どのバージョンのBlenderを使用するか選んでください。自動でBlenderが開き、モーションデータと映像データが両方インポートされたシーンを作成するようです。
 実際に作成されたものが映像1になります。
 
 |映像1：FreeMoCapの骸骨|
