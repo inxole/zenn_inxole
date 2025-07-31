@@ -3,7 +3,7 @@ title: "FreeMoCapで録画したモーションデータをBlenderで出力す�
 emoji: "🎥"
 type: "tech"
 topics: ["FreeMoCap", "Blender", "Python"]
-published: false
+published: true
 ---
 
 [壱]:https://github.com/pyenv/pyenv
@@ -26,7 +26,7 @@ FreeMoCapは、無料で使えるオープンソースのモーションキャ�
 ## FreeMoCapセットアップ手順
 
 ローカルに直接インストールすると他のプロジェクトと競合するため仮想環境で実行しました。仮想環境 ⇒ FreeMoCapの順に説明します。
-使用した機能のバージョンはこちらです。
+使用した各ツールのバージョンはこちらです。
 ```
 pyenv + python 3.12.0
 poetry 1.7.1
@@ -140,3 +140,7 @@ recording_XX_XX_XX_gmt+9/
 
 ## まとめ
 
+ローカル環境で簡単にモーションキャプチャーができるのでお勧めです。公式ドキュメントも分かりやすいので導入が簡単でした。
+何らかのサービスに課金することもなく、高額な機械もいらず、その場でできる。すごい技術だ。
+
+さて、二台目のカメラを買ってこよ。
